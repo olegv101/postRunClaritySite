@@ -5,21 +5,20 @@ import RunClubLogo from './../images/runclubimage.svg';
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { IoSparklesOutline } from "react-icons/io5";
 
-
 export default function Home() {
   return (
     <main className="flex justify-center min-h-screen relative">
       <BackgroundBeams />
 
       {/* text and image */}
-      <div className="flex flex-row items-center space-x-12 z-99">
+      <div className="flex flex-row items-center space-x-12 z-10"> {/* Lower z-index to ensure SignUp is on top */}
 
         {/* text containers */}
         <div className="flex flex-col space-y-8">
 
           {/* app name and logo */}
           <div className="flex flex-row items-start text-gray-300">
-            <h2 className="font-regular text-3xl tracking-tighter">Runner's High</h2>
+            <h2 className="font-regular text-3xl tracking-tighter">Runner&apos;s High</h2>
             <FaRunning />
           </div>
           {/* main text */}
@@ -27,16 +26,13 @@ export default function Home() {
             <h1 className="text-8xl font-medium text-black tracking-tighter">Find</h1>
             <h1 className="text-8xl font-medium text-black tracking-tighter">Run</h1>
             <h1 className="text-8xl font-medium text-black tracking-tighter">Clubs</h1>
-            <h1 className="text-8xl font-bold text-white tracking-tighter rainbow-text">with Vibez
-            </h1>
+            <h1 className="text-8xl font-bold text-white tracking-tighter rainbow-text">with Vibez</h1>
           </div>
           {/* subtext */}
           <div className="flex flex-row items-start opacity-30">
             <h2 className="font-regular text-3xl tracking-tighter">Built By Runners For Runners</h2>
           </div>
-
-          <div data-tf-live="01J29C5FPP98PYMRZRE7N3G3W5"></div><script src="//embed.typeform.com/next/embed.js"></script>
-
+          <SignUp /> {/* Make sure SignUp component is placed correctly */}
         </div>
 
         {/* image with glow */}
@@ -57,12 +53,10 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <SignUp /> */}
-
       <div className="absolute bottom-10 w-10/12 bg-transparent text-black py-4 border-t border-black border-opacity-30">
         <div className="container flex flex-col md:flex-row justify-between items-center">
           <div className="text-center opacity-60 md:text-left">
-            <p className="text-sm">© 2024 Runner's High. All rights reserved.</p>
+            <p className="text-sm">© 2024 Runner&apos;s High. All rights reserved.</p>
             <p className="text-sm">Terms Privacy Security</p>
           </div>
           <div className="flex space-x-4 mt-2 md:mt-0 opacity-60">
@@ -78,8 +72,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-
     </main>
   );
 }
