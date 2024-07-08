@@ -3,6 +3,8 @@ import SignUp from "./signUpCard";
 import Image from 'next/image';
 import RunClubLogo from './../images/runclubimage.svg';
 import { BackgroundBeams } from "@/components/ui/background-beams";
+import { IoSparklesOutline } from "react-icons/io5";
+
 
 export default function Home() {
   return (
@@ -40,10 +42,16 @@ export default function Home() {
         {/* image with glow */}
         <div className="relative">
           <div className="absolute inset-0 flex justify-center items-center">
-            <div className="size-[600px] bg-white rounded-full opacity-90 blur-4xl"></div>
+            <div className="size-[700px] bg-white rounded-full opacity-90 blur-lg"></div>
           </div>
           <div className="absolute inset-0 flex justify-center items-center">
-            <div className="w-96 h-96 bg-[#EB5147] rounded-full opacity-90 blur-3xl"></div>
+            <div className="size-[500px] bg-[#EB5147] rounded-full opacity-90 blur-3xl"></div>
+          </div>
+          <div className="absolute left-72 -rotate-12 animate-bounce opacity-20">
+            <IoSparklesOutline size={52} />
+          </div>
+          <div className="absolute bottom-0 right-52 delay-300 -rotate-12 animate-bounce opacity-40">
+            <IoSparklesOutline size={62} />
           </div>
           <Image src={RunClubLogo} alt="Run Club Logo" width={850} height={850} className="relative z-10" />
         </div>
@@ -51,21 +59,21 @@ export default function Home() {
 
       {/* <SignUp /> */}
 
-      <div className="absolute bottom-0 w-4/5 bg-transparent text-white py-4 border-t border-black border-opacity-30 px-20 mx-20">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-center md:text-left">
+      <div className="absolute bottom-10 w-10/12 bg-transparent text-black py-4 border-t border-black border-opacity-30">
+        <div className="container flex flex-col md:flex-row justify-between items-center">
+          <div className="text-center opacity-60 md:text-left">
             <p className="text-sm">© 2024 Runner's High. All rights reserved.</p>
-            <p className="text-sm">Terms | Privacy | Security</p>
+            <p className="text-sm">Terms Privacy Security</p>
           </div>
-          <div className="flex space-x-4 mt-2 md:mt-0">
-            <a href="https://www.facebook.com" className="text-white hover:text-gray-400">
-              <FaFacebook size={24} />
+          <div className="flex space-x-4 mt-2 md:mt-0 opacity-60">
+            <a href="https://www.facebook.com" className="text-black hover:text-gray-400">
+              <FaFacebook size={18} />
             </a>
-            <a href="https://www.twitter.com" className="text-white hover:text-gray-400">
-              <FaTwitter size={24} />
+            <a href="https://www.twitter.com" className="text-black hover:text-gray-400">
+              <FaTwitter size={18} />
             </a>
-            <a href="https://www.instagram.com" className="text-white hover:text-gray-400">
-              <FaInstagram size={24} />
+            <a href="https://www.instagram.com" className="text-black hover:text-gray-400">
+              <FaInstagram size={18} />
             </a>
           </div>
         </div>
