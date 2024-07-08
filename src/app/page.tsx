@@ -7,30 +7,30 @@ import { IoSparklesOutline } from "react-icons/io5";
 
 export default function Home() {
   return (
-    <main className="flex justify-center min-h-screen relative">
+    <main className="flex flex-col items-center justify-center min-h-screen relative">
       <BackgroundBeams />
 
       {/* text and image */}
-      <div className="flex flex-row items-center space-x-12 z-10"> {/* Lower z-index to ensure SignUp is on top */}
+      <div className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12 z-10 px-4"> {/* Adjusted for responsive layout */}
 
         {/* text containers */}
-        <div className="flex flex-col space-y-8">
+        <div className="flex flex-col space-y-8 text-center md:text-left">
 
           {/* app name and logo */}
-          <div className="flex flex-row items-start text-gray-300">
+          <div className="flex flex-row items-center justify-center md:justify-start text-gray-300 space-x-2">
             <h2 className="font-regular text-3xl tracking-tighter">Runner&apos;s High</h2>
             <FaRunning />
           </div>
           {/* main text */}
           <div>
-            <h1 className="text-8xl font-medium text-black tracking-tighter">Find</h1>
-            <h1 className="text-8xl font-medium text-black tracking-tighter">Run</h1>
-            <h1 className="text-8xl font-medium text-black tracking-tighter">Clubs</h1>
-            <h1 className="text-8xl font-bold text-white tracking-tighter rainbow-text">with Vibez</h1>
+            <h1 className="text-4xl md:text-8xl font-medium text-black tracking-tighter">Find</h1>
+            <h1 className="text-4xl md:text-8xl font-medium text-black tracking-tighter">Run</h1>
+            <h1 className="text-4xl md:text-8xl font-medium text-black tracking-tighter">Clubs</h1>
+            <h1 className="text-4xl md:text-8xl font-bold text-white tracking-tighter rainbow-text">with Vibez</h1>
           </div>
           {/* subtext */}
-          <div className="flex flex-row items-start opacity-30">
-            <h2 className="font-regular text-3xl tracking-tighter">Built By Runners For Runners</h2>
+          <div className="flex flex-row items-center justify-center md:justify-start opacity-30">
+            <h2 className="font-regular text-2xl md:text-3xl tracking-tighter">Built By Runners For Runners</h2>
           </div>
           <SignUp /> {/* Make sure SignUp component is placed correctly */}
         </div>
@@ -38,22 +38,22 @@ export default function Home() {
         {/* image with glow */}
         <div className="relative">
           <div className="absolute inset-0 flex justify-center items-center">
-            <div className="size-[700px] bg-white rounded-full opacity-90 blur-lg"></div>
+            <div className="w-72 h-72 md:w-[700px] md:h-[700px] bg-white rounded-full opacity-90 blur-lg"></div>
           </div>
           <div className="absolute inset-0 flex justify-center items-center">
-            <div className="size-[500px] bg-[#EB5147] rounded-full opacity-90 blur-3xl"></div>
+            <div className="w-48 h-48 md:w-[500px] md:h-[500px] bg-[#EB5147] rounded-full opacity-90 blur-3xl"></div>
           </div>
-          <div className="absolute left-72 -rotate-12 animate-bounce opacity-20">
-            <IoSparklesOutline size={52} />
+          <div className="absolute left-16 md:left-72 md:opacity-0 -rotate-12 animate-bounce opacity-20">
+            <IoSparklesOutline size={32} />
           </div>
-          <div className="absolute bottom-0 right-52 delay-300 -rotate-12 animate-bounce opacity-40">
-            <IoSparklesOutline size={62} />
+          <div className="absolute bottom-0 right-16 md:opacity-0 md:right-52 delay-300 -rotate-12 animate-bounce opacity-40">
+            <IoSparklesOutline size={42} />
           </div>
           <Image src={RunClubLogo} alt="Run Club Logo" width={850} height={850} className="relative z-10" />
         </div>
       </div>
 
-      <div className="absolute bottom-10 w-10/12 bg-transparent text-black py-4 border-t border-black border-opacity-30">
+      <div className="absolute bottom-10 w-11/12 md:w-10/12 bg-transparent text-black py-4 border-t border-black border-opacity-30">
         <div className="container flex flex-col md:flex-row justify-between items-center">
           <div className="text-center opacity-60 md:text-left">
             <p className="text-sm">© 2024 Runner&apos;s High. All rights reserved.</p>
