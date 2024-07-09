@@ -17,6 +17,15 @@ export default function Home() {
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen relative">
+
+      <div className='absolute top-4 right-4 flex space-x-2 md:space-x-4 z-50'>
+        <button className="bg-transparent text-black py-2 px-4 rounded-md text-sm md:text-base hover:bg-white">Runner?</button>
+        <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+          More Polised Features
+        </button>
+      </div>
+
+
       <div className="hidden md:block">
         <BackgroundBeams />
       </div>
@@ -67,17 +76,17 @@ export default function Home() {
           <div className="absolute inset-0 flex justify-center items-center">
             <div className="w-[500px] h-[500px] bg-[#EB5147] rounded-full opacity-90 blur-3xl"></div>
           </div>
-          <div className="absolute left-16 md:left-72 -rotate-12 animate-bounce opacity-20 md:opacity-0">
+          <div className="absolute left-16 md:left-72 -rotate-12 animate-bounce opacity-20">
             <IoSparklesOutline size={32} />
           </div>
-          <div className="absolute bottom-0 right-16 md:right-52 delay-300 -rotate-12 animate-bounce opacity-40 md:opacity-0">
+          <div className="absolute bottom-0 right-16 md:right-52 delay-300 -rotate-12 animate-bounce opacity-40">
             <IoSparklesOutline size={42} />
           </div>
           <Image src={RunClubLogo} alt="Run Club Logo" width={850} height={850} className="relative z-10" />
         </div>
       </div>
 
-      <div className="relative z-50 w-11/12 md:w-10/12 bg-transparent text-black py-4 border-t border-black border-opacity-30 mt-10 md:absolute md:bottom-10">
+      <div className="relative z-40 w-11/12 md:w-10/12 bg-transparent text-black py-4 border-t border-black border-opacity-30 mt-10 md:absolute md:bottom-10">
         <div className="container flex flex-col md:flex-row justify-between items-center">
           <div className="text-center opacity-60 md:text-left">
             <p className="text-sm">© 2024 Runner&apos;s High. All rights reserved.</p>
