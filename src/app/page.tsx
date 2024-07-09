@@ -6,14 +6,32 @@ import RunClubLogo from './../images/runclubimage.svg';
 import { BackgroundBeams } from '@/components/ui/background-beams';
 import { IoSparklesOutline } from 'react-icons/io5';
 import { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 
 export default function Home() {
+  const controls = useAnimation();
+
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://tally.so/widgets/embed.js';
     script.async = true;
     document.head.appendChild(script);
-  }, []);
+
+    controls.start({
+      opacity: 1,
+      transition: { delay: 2, duration: 1 },
+    });
+  }, [controls]);
+
+  const textVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, rotate: -10 },
+    visible: { opacity: 1, rotate: 0 },
+  };
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen relative">
@@ -21,14 +39,17 @@ export default function Home() {
       <div className='absolute top-4 right-4 flex space-x-2 md:space-x-4 z-50'>
         <button className="bg-transparent text-black py-2 px-4 rounded-md text-sm md:text-base hover:bg-white">Runner?</button>
         <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-          More Polised Features
+          More Polished Features
         </button>
       </div>
 
-
-      <div className="hidden md:block">
+      <motion.div
+        className="hidden md:block"
+        initial={{ opacity: 0 }}
+        animate={controls}
+      >
         <BackgroundBeams />
-      </div>
+      </motion.div>
 
       {/* text and image */}
       <div className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12 z-10 px-4">
@@ -37,39 +58,81 @@ export default function Home() {
         {/* text containers */}
         <div className="flex flex-col space-y-8 text-center md:text-left">
           {/* app name and logo */}
-          <div className="flex flex-row items-center justify-center md:justify-start text-gray-300 space-x-2">
+          <motion.div
+            className="flex flex-row items-center justify-center md:justify-start text-gray-300 space-x-2"
+            initial="hidden"
+            animate="visible"
+            variants={textVariants}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
             <h2 className="font-regular text-5xl md:text-3xl tracking-tighter">Runner&apos;s High</h2>
             <FaRunning />
-          </div>
+          </motion.div>
           {/* main text */}
-          <div>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={textVariants}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          >
             <h1 className="text-7xl md:text-8xl font-medium text-black tracking-tighter">Find</h1>
             <h1 className="text-7xl md:text-8xl font-medium text-black tracking-tighter">Run</h1>
             <h1 className="text-7xl md:text-8xl font-medium text-black tracking-tighter">Clubs</h1>
             <h1 className="text-7xl md:text-8xl font-bold text-white tracking-tighter rainbow-text">with Vibez</h1>
-          </div>
+          </motion.div>
           {/* subtext */}
-          <div className="flex flex-row items-center justify-center md:justify-start opacity-30">
+          <motion.div
+            className="flex flex-row items-center justify-center md:justify-start opacity-30"
+            initial="hidden"
+            animate="visible"
+            variants={textVariants}
+            transition={{ delay: 0.6, duration: 0.6 }}
+          >
             <h2 className="font-regular text-4xl md:text-3xl tracking-tighter">Built By Runners For Runners</h2>
+          </motion.div>
+
+          {/* Tally form buttons */}
+          <div className='flex flex-col'>
+            <motion.button
+              data-tally-open="mRLz24"
+              data-tally-layout="modal"
+              data-tally-width="386"
+              data-tally-hide-title="1"
+              data-tally-emoji-text="👋✨"
+              data-tally-emoji-animation="wave"
+              data-tally-auto-close="0"
+              className="mt-4 bg-black text-white py-2 px-4 rounded"
+              initial="hidden"
+              animate="visible"
+              variants={textVariants}
+              transition={{ delay: 0.8, duration: 0.6 }}
+            >
+              Add Your Run Club
+            </motion.button>
+            <motion.button
+              data-tally-open="n9l1BX" data-tally-layout="modal"
+              data-tally-emoji-text="👟"
+              data-tally-emoji-animation="wave"
+              className="mt-4 bg-white text-black py-2 px-4 rounded"
+              initial="hidden"
+              animate="visible"
+              variants={textVariants}
+              transition={{ delay: 1, duration: 0.6 }}
+            >
+              Join Waitlist
+            </motion.button>
           </div>
 
-          {/* Tally form button */}
-          <button
-            data-tally-open="mRLz24"
-            data-tally-layout="modal"
-            data-tally-width="386"
-            data-tally-hide-title="1"
-            data-tally-emoji-text="👋✨"
-            data-tally-emoji-animation="wave"
-            data-tally-auto-close="0"
-            className="mt-4 bg-black text-white py-2 px-4 rounded"
-          >
-            Add Your Run Club
-          </button>
         </div>
 
         {/* image with glow */}
-        <div className="relative">
+        <motion.div
+          className="relative"
+          initial="hidden"
+          animate="visible"
+          variants={imageVariants}
+          transition={{ delay: 1, duration: 1 }}
+        >
           <div className="absolute inset-0 flex justify-center items-center">
             <div className="w-[700px] h-[700px] bg-white rounded-full opacity-90 blur-lg"></div>
           </div>
@@ -83,7 +146,7 @@ export default function Home() {
             <IoSparklesOutline size={42} />
           </div>
           <Image src={RunClubLogo} alt="Run Club Logo" width={850} height={850} className="relative z-10" />
-        </div>
+        </motion.div>
       </div>
 
       <div className="relative z-40 w-11/12 md:w-10/12 bg-transparent text-black py-4 border-t border-black border-opacity-30 mt-10 md:absolute md:bottom-10">
