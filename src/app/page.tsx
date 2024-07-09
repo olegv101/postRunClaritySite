@@ -61,23 +61,23 @@ export default function Home() {
 
         {/* image with glow */}
         <div className="relative">
-          <div className="absolute inset-0 flex justify-center items-center md:block hidden">
-            <div className="w-72 h-72 md:w-[700px] md:h-[700px] bg-white rounded-full opacity-90 blur-lg"></div>
+          <div className="absolute inset-0 flex justify-center items-center">
+            <div className="w-[700px] h-[700px] bg-white rounded-full opacity-90 blur-lg"></div>
           </div>
-          <div className="absolute inset-0 flex justify-center items-center md:block hidden">
-            <div className="w-48 h-48 md:w-[500px] md:h-[500px] bg-[#EB5147] rounded-full opacity-90 blur-3xl"></div>
+          <div className="absolute inset-0 flex justify-center items-center">
+            <div className="w-[500px] h-[500px] bg-[#EB5147] rounded-full opacity-90 blur-3xl"></div>
           </div>
-          <div className="absolute left-16 md:left-72 md:opacity-0 -rotate-12 animate-bounce opacity-20 md:block hidden">
+          <div className="absolute left-16 md:left-72 -rotate-12 animate-bounce opacity-20 md:opacity-0">
             <IoSparklesOutline size={32} />
           </div>
-          <div className="absolute bottom-0 right-16 md:opacity-0 md:right-52 delay-300 -rotate-12 animate-bounce opacity-40 md:block hidden">
+          <div className="absolute bottom-0 right-16 md:right-52 delay-300 -rotate-12 animate-bounce opacity-40 md:opacity-0">
             <IoSparklesOutline size={42} />
           </div>
           <Image src={RunClubLogo} alt="Run Club Logo" width={850} height={850} className="relative z-10" />
         </div>
       </div>
 
-      <div className="w-11/12 md:w-10/12 bg-transparent text-black py-4 border-t border-black border-opacity-30 mt-10 md:absolute md:bottom-10">
+      <div className="relative z-50 w-11/12 md:w-10/12 bg-transparent text-black py-4 border-t border-black border-opacity-30 mt-10 md:absolute md:bottom-10">
         <div className="container flex flex-col md:flex-row justify-between items-center">
           <div className="text-center opacity-60 md:text-left">
             <p className="text-sm">© 2024 Runner&apos;s High. All rights reserved.</p>
