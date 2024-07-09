@@ -88,11 +88,12 @@ export default function Home() {
             variants={textVariants}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
-            <h2 className="font-regular text-4xl md:text-3xl tracking-tighter">Built By Runners For Runners</h2>
+            <h2 className="font-regular text-4xl text-gray-400 md:text-3xl tracking-tighter">Built By Runners For Runners</h2>
           </motion.div>
 
           {/* Tally form buttons */}
-          <div className='flex flex-col'>
+          <div className='flex flex-col group'>
+            {/* <IoSparklesOutline className='translate-y-16 translate-x-2 group-hover:-translate-y-2 group-hover:ease-in transition duration-300 '/> */}
             <motion.button
               data-tally-open="mRLz24"
               data-tally-layout="modal"
@@ -101,25 +102,25 @@ export default function Home() {
               data-tally-emoji-text="👋✨"
               data-tally-emoji-animation="wave"
               data-tally-auto-close="0"
-              className="mt-4 bg-black text-white py-2 px-4 rounded"
+              className="mt-4 border-2 bg-black text-white py-4 px-4 rounded"
               initial="hidden"
               animate="visible"
               variants={textVariants}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
-              Add Your Run Club
+              Run Club? Add Your Run Club
             </motion.button>
             <motion.button
               data-tally-open="n9l1BX" data-tally-layout="modal"
               data-tally-emoji-text="👟"
               data-tally-emoji-animation="wave"
-              className="mt-4 bg-white text-black py-2 px-4 rounded"
+              className="mt-4 bg-white text-black py-4 px-4 rounded"
               initial="hidden"
               animate="visible"
               variants={textVariants}
               transition={{ delay: 1, duration: 0.6 }}
             >
-              Join Waitlist
+              Runner? Join the Waitlist
             </motion.button>
           </div>
 
