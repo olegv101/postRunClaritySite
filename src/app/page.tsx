@@ -34,7 +34,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen relative">
+    <main className="flex flex-col items-center justify-center min-h-screen relative overflow-x-hidden">
 
       <div className='absolute top-4 right-4 flex space-x-2 md:space-x-4 z-50'>
         <button className="bg-transparent text-black py-2 px-4 rounded-md text-sm md:text-base hover:bg-white">Runner?</button>
@@ -148,7 +148,7 @@ export default function Home() {
           <div className="absolute bottom-0 right-16 md:right-52 delay-300 -rotate-12 animate-bounce opacity-40">
             <IoSparklesOutline size={42} />
           </div>
-          <Image src={RunClubLogo} alt="Run Club Logo" width={850} height={850} className="relative z-10" />
+          <Image src={RunClubLogo} alt="Run Club Logo" className="size-[850px] relative z-10" />
 
         </motion.div>
       </div>
