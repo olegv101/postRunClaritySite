@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Runners High",
-  description: "Run Club, Run Club Near Me, Best Run Clubs Berkeley - FIND THEM ALL HERE ON RUNNERS HIGH",
+  description: "Scale your run club with vibez, find run clubs near you with vibez wherever you are.",
 };
 
 export default function RootLayout({
