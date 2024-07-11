@@ -53,13 +53,13 @@ export default function Home() {
 
       {/* text and image */}
       <div className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12 z-10 px-4">
-        {/* Adjusted for responsive layout */}
 
         {/* text containers */}
         <div className="flex flex-col space-y-8 text-center md:text-left">
+          
           {/* app name and logo */}
           <motion.div
-            className="flex flex-row items-center justify-center md:justify-start text-gray-300 space-x-2"
+            className="mt-20 md:mt-0 flex flex-row items-center justify-center md:justify-start text-gray-300 space-x-2"
             initial="hidden"
             animate="visible"
             variants={textVariants}
@@ -68,6 +68,7 @@ export default function Home() {
             <h2 className="font-regular text-5xl md:text-3xl tracking-tighter">Runner&apos;s High</h2>
             <FaRunning />
           </motion.div>
+
           {/* main text */}
           <motion.div
             initial="hidden"
@@ -134,11 +135,12 @@ export default function Home() {
           variants={imageVariants}
           transition={{ delay: 1, duration: 1 }}
         >
+
           <div className="absolute inset-0 flex justify-center items-center">
-            <div className="w-[700px] h-[700px] bg-white rounded-full opacity-90 blur-lg"></div>
+            <div className="md:w-[700px] md:h-[700px] bg-white rounded-full opacity-90 blur-lg"></div>
           </div>
           <div className="absolute inset-0 flex justify-center items-center">
-            <div className="w-[500px] h-[500px] bg-[#EB5147] rounded-full opacity-90 blur-3xl"></div>
+            <div className="md:w-[500px] md:h-[500px] bg-[#EB5147] rounded-full opacity-90 blur-3xl"></div>
           </div>
           <div className="absolute left-16 md:left-72 -rotate-12 animate-bounce opacity-20">
             <IoSparklesOutline size={32} />
@@ -147,6 +149,7 @@ export default function Home() {
             <IoSparklesOutline size={42} />
           </div>
           <Image src={RunClubLogo} alt="Run Club Logo" width={850} height={850} className="relative z-10" />
+
         </motion.div>
       </div>
 
