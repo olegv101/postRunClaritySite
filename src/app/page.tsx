@@ -150,6 +150,7 @@ export default function Home() {
         </motion.div>
       </div>
 
+      {/* Footer */}
       <div className="relative z-40 w-11/12 md:w-10/12 bg-transparent text-black py-4 border-t border-black border-opacity-30 mt-10 md:absolute md:bottom-10">
         <div className="container flex flex-col md:flex-row justify-between items-center">
           <div className="text-center opacity-60 md:text-left">
