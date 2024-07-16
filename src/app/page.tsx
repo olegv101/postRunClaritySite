@@ -7,6 +7,7 @@ import { BackgroundBeams } from '@/components/ui/background-beams';
 import { IoSparklesOutline } from 'react-icons/io5';
 import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Home() {
   const controls = useAnimation();
@@ -39,7 +40,7 @@ export default function Home() {
       <div className='absolute top-4 right-4 flex space-x-2 md:space-x-4 z-50'>
         <button className="bg-transparent text-black py-2 px-4 rounded-md text-sm md:text-base hover:bg-white">Runner?</button>
         <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-          More Polished Features
+          <Link href = "/features">More Polished Features</Link>
         </button>
       </div>
 
