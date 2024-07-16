@@ -5,9 +5,9 @@ export default function Features() {
 
     const features = [
         {
-            title: "Built for developers",
+            title: "Connect with Strava",
             description:
-                "Built for engineers, developers, dreamers, thinkers and doers.",
+                "Mirror your existing strava directly in-app.",
             icon: <RiRunFill size={32}/>,
         },
         {
