@@ -51,7 +51,7 @@ export default function Features() {
             <div className='min-h-screen p-20 flex justify-center '>
                 <div className="flex flex-col">
                     <h1 className='text-9xl text-white font-semibold mx-auto mb-10'>Features</h1>
-                    <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 w-full max-w-6xl">
+                    <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-3 w-full max-w-6xl">
                         {features.map((feature, index) => (
                             <div className='hover:-translate-y-2 hover:border hover:border-black transition duration-1000, w-60 p-10 rounded-lg bg-pink-400 text-white' key={index}>
                                 <div className='mb-2'>{feature.icon}</div>
