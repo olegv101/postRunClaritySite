@@ -35,7 +35,7 @@ export default function Features() {
             icon: <RiChat3Fill size={32}/>,
         },
         {
-            title: "Track Achievements",
+            title: "Heat Map",
             description: "Monitor your progress and earn badges.",
             icon: <RiMedalFill size={32}/>,
         },
