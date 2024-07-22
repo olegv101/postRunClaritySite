@@ -41,7 +41,7 @@ export default function Features() {
         },
         {
             title: "Global Integration",
-            description: "Connec with runners worldwide and share experiences.",
+            description: "Connect with runners worldwide and share experiences.",
             icon: <RiGlobalFill size={32}/>,
         },
     ];
