@@ -15,7 +15,7 @@ export default function Features() {
             icon: <RiMapPin2Fill size={32}/>,
         },
         {
-            title: "Join Community Events",
+            title: "Match with Runners",
             description: "Participate in local running events and meetups.",
             icon: <RiCommunityFill size={32}/>,
         },
